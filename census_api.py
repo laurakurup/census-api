@@ -35,7 +35,7 @@ etc. and housing data by occupancy, vacancy status, and tenure.
 # census API key --> 
 census_api_key = 'YOUR-KEY-HERE'
 
-# variable(s) to download (limit of 50)
+# variable(s) to download 
 get_variables = ['PCT0050002', 'PCT0060002', 'PCT0070002']  
 
 # '1990', '2000' or '2010'

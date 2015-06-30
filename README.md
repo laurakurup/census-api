@@ -7,13 +7,13 @@ In a few quick steps, you'll be querying to your heart's content.  Here's how to
 
 ## 1) Request a Census API key
 
-    census_api_key = 'YOUR-KEY-HERE'
+    60  census_api_key = 'YOUR-KEY-HERE'
 
 It's easy and fast! Request at http://www.census.gov/developers/
 
 ## 2) Identify variables for the data you want
 
-    variables_csv = 'census_variables.csv'
+    64  variables_csv = 'census_variables.csv'
 
 **Get the csv template:** [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)
 
@@ -37,20 +37,17 @@ year:'2010' column_name:'housing_renter' becomes 'housing_renter_2010'
 
 Make sure you list the correct year for each variable.  They change year to year, even for the same data.  For example:
 
-| year | variable | column_name    | label | concept                                                      
+| year | variable | column_name    | label           | concept                                     |
 |------|----------|----------------|-----------------|---------------------------------------------------------------
-| 2010 | H0110004 | housing_renter | Renter occupied | H11. TOTAL POPULATION IN OCCUPIED HOUSING UNITS BY TENURE | 
-| 2000 | H011003  | housing_renter | Renter occupied | H11. Total Population In Occupied Housing Units By Tenure | 
+| 2010 | H0110004 | housing_renter | Renter occupied | H11. TOTAL POPULATION IN OCCUPIED... | 
+| 2000 | H011003  | housing_renter | Renter occupied | H11. Total Population In Occupied... | 
 
 ...  if you query 2010 for H011003, you'll get an error.
-
-    # 'state', 'county', 'metro' or 'metro-micro'
-    location_type = 'state'   
 
 
 ## 3) Locations:
 
-    location_type = 'state'   
+    67  location_type = 'state'   
   
 Source files and documentation available here: [https://github.com/laurakurup/data](https://github.com/laurakurup/data)
 

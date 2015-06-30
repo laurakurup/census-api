@@ -19,9 +19,9 @@ You need a [csv file](https://github.com/laurakurup/census-api/raw/master/census
 | 2010 | H0110004 | housing_renter |
 | 2000 | H011003  | housing_renter |
 
-[**Download the template:** https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv).
+**Download the template:** [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv).
 
-The template has extra columns, which cut and paste nicely from the Census variable reference pages (links below). **Extra columns are ignored by the script**.  Feel free to delete them!  Or add more!  The script only references _year_, _variable_ and _column_name_.  
+**Extra columns are ignored by the script**. The template has extra columns, which cut and paste nicely from the Census variable reference pages (links below).   Feel free to delete them!  Or add more!  The script only references _year_, _variable_ and _column_name_.  
 
 #### API Limits?
 You can run this script for 1 variable or hundreds of variables!  The script will divide your requests into batches of 50 (the API limit) and run multiple requests to gather your data.

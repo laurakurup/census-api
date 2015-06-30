@@ -12,7 +12,7 @@ It's easy!  And fast! Request at [http://www.census.gov/developers/](http://www.
 
 ## 2) Identify variables
 
-**Download the csv template here: [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)**
+**Download the csv template:** [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)
 
 Variables can be found here:
 

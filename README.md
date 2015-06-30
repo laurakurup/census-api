@@ -7,12 +7,12 @@ In a few quick steps, you'll be querying to your heart's content.
 
 ## 1) Request a Census API key
 
-It's easy!  And fast! Request at [census.gov/developers/](http://www.census.gov/developers/)
+It's easy!  And fast! Request yours at [census.gov/developers/](http://www.census.gov/developers/)
 
 
 ## 2) Identify variables
 
-You need a [csv file](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) of the variables you want to gather.  It should look like this:
+You need a csv file of the variables you want to gather.  It should look like this:
 
 | year | variable | column_name    |
 |------|----------|----------------|
@@ -22,10 +22,6 @@ You need a [csv file](https://github.com/laurakurup/census-api/raw/master/census
 Download the **[census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)** template.
 
 **Extra columns are ignored by the script**. The template has columns for _label_ and _concept_, which cut and paste nicely from the Census variable reference pages (links below).  Feel free to delete them!  Or add more!  The script only uses _year_, _variable_ and _column_name_.  
-
-#### API Limits?
-You can run this script for 1 variable or hundreds of variables!  The script will divide your requests into batches of 50 (the API limit) and run multiple requests to gather your data.
-
 
 #### Find variables by year:
 
@@ -44,6 +40,11 @@ If 'add_year'is True (line 73), **the script adds the year to the column name**:
 year:_2000_ column_name:_housing_renter_ becomes _housing_renter_2000_
 
 year:_2010_ column_name:_housing_renter_ becomes _housing_renter_2010_    
+
+#### Is there a limit?
+You can run this script for hundreds of variables!  The script will divide your csv file into batches of 50 variables (the API limit) and run multiple requests to gather your data.
+
+
 
 
 ## 3) Locations:

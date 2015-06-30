@@ -9,9 +9,10 @@ In a few quick steps, you'll be querying to your heart's content.
 
 It's easy!  And fast! Request at [http://www.census.gov/developers/](http://www.census.gov/developers/)
 
+
 ## 2) Identify variables
 
-**Get the csv template:** [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)
+**Download the csv template here: [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)**
 
 Variables can be found here:
 
@@ -19,7 +20,7 @@ Variables can be found here:
 
 + 2000 Census: http://api.census.gov/data/2000/sf1/variables.html 
 
-
+<br>
 
 #### Customize your column names
 
@@ -31,6 +32,7 @@ year:**'2000'** column_name:**'housing_renter'** becomes **'housing_renter_2000'
 
 year:**'2010'** column_name:**'housing_renter'** becomes **'housing_renter_2010'**    
 
+<br>
 
 
 #### Only the first three columns are used by this script. 
@@ -41,8 +43,8 @@ Make sure you list the correct year for each variable.  They change year to year
 
 | year | variable | column_name    | label           | concept                      |
 |------|----------|----------------|-----------------|--------------------------------------
-| 2010 | H0110004 | housing_renter | Renter occupied | H11. TOTAL POPULA... | 
-| 2000 | H011003  | housing_renter | Renter occupied | H11. Total Popula... | 
+| 2010 | H0110004 | housing_renter | Renter occupied | H11. TOTAL POPULATION... | 
+| 2000 | H011003  | housing_renter | Renter occupied | H11. Total Population... | 
 
 ...  if you query 2010 for H011003, you'll get an error.
 

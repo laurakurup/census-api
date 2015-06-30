@@ -2,14 +2,14 @@
 
 This script creates a pandas dataframe and csv file from the U.S. Census Decennial Census API, which offers access to population data by sex, age, race, etc. and housing data by occupancy, vacancy status, and tenure. 
 
-In a few quick steps, you'll be querying to your heart's content.  Here's how to configure this script:
+In a few quick steps, you'll be querying to your heart's content.
 
 
 ## 1) Request a Census API key
 
 It's easy!  And fast! Request at [http://www.census.gov/developers/](http://www.census.gov/developers/)
 
-## 2) Identify variables for the data you want
+## 2) Identify variables
 
 **Get the csv template:** [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)
 
@@ -19,7 +19,7 @@ Variables can be found here:
 
 + 2000 Census: http://api.census.gov/data/2000/sf1/variables.html 
 
-### Customize your column names
+#### Customize your column names
 
 In the [census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  You can simple cut/paste the variables.  
 
@@ -29,7 +29,7 @@ year:**'2000'** column_name:**'housing_renter'** becomes **'housing_renter_2000'
 
 year:**'2010'** column_name:**'housing_renter'** becomes **'housing_renter_2010'**    
 
-### Only the first three columns are used by this script. 
+#### Only the first three columns are used by this script. 
 
 The label and concept columns are option.  They can be ignored or used for your reference.  I use them to track the census explinations for each variable.  Add more columns if you want!  Just make sure the first three columns are year, variable and column_name.
 

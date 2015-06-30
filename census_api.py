@@ -33,13 +33,13 @@ etc. and housing data by occupancy, vacancy status, and tenure.
 ''' Configure your request '''
 
 # census API key --> 
-census_api_key = 'YOUR-KEY-HERE'
+census_api_key = '7fc60ad059588e53e92b1d5345845a1978356690'
 
 # variable(s) to download (limit of 50)
-get_variables = ['PCT0050002', 'PCT0060002', 'PCT0070002']  
+get_variables = ['PCT005002', 'PCT006002', 'PCT007002']
 
 # '1990', '2000' or '2010'
-census_year = '2010'   
+census_year = '2000'   
 
 # 'county', 'metro' or 'metro-micro'
 location_type = 'metro'   
@@ -97,7 +97,6 @@ def get_census_data(source_url):
 
 # query the API for your data!
 df['data'] = [get_census_data(item) for item in df['source_url']]
-
 
 
 

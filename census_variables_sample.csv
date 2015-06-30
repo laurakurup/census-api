@@ -1,0 +1,14 @@
+year,variable,column_name,label,concept
+2010,H0110001,housing_total,Population in occupied housing units,H11. TOTAL POPULATION IN OCCUPIED HOUSING UNITS BY TENURE [4]
+2010,H0110002,housing_owned_loan,Owned with a mortgage or a loan,H11. TOTAL POPULATION IN OCCUPIED HOUSING UNITS BY TENURE [4]
+2010,H0110003,housing_owned_noloan,Owned free and clear,H11. TOTAL POPULATION IN OCCUPIED HOUSING UNITS BY TENURE [4]
+2010,H0110004,housing_renter,Renter occupied,H11. TOTAL POPULATION IN OCCUPIED HOUSING UNITS BY TENURE [4]
+2000,H011001,housing_total,population in occupied housing units:Total,H11. Total Population In Occupied Housing Units By Tenure [3]
+2000,H011002,housing_owned,POP HU BY TENURE:Owner occupied,H11. Total Population In Occupied Housing Units By Tenure [3]
+2000,H011003,housing_renter,POP HU BY TENURE:Renter occupied,H11. Total Population In Occupied Housing Units By Tenure [3]
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

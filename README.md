@@ -25,15 +25,15 @@ Download the **[census_variables.csv](https://github.com/laurakurup/census-api/r
 
 #### Find variables by year:
 
-+ 2010 Census: http://api.census.gov/data/2010/sf1/variables.html
++ [2010 Census Variables](http://api.census.gov/data/2010/sf1/variables.html)
 
-+ 2000 Census: http://api.census.gov/data/2000/sf1/variables.html 
++ [2000 Census Variables](http://api.census.gov/data/2000/sf1/variables.html)
  
 Make sure you list the correct year for each variable.  The variables change year to year, even for the same data.
 
 #### Customize your column names:
 
-In your [csv file](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  You can simply cut/paste the variables into this column.  
+In your [csv file](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  Just reuse your variables as your column names.  
 
 **Add the year to your column names?**  If the option _add_year_ is True (line 73 of the script), the year will be appended to the column name:
 

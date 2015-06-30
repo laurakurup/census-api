@@ -37,9 +37,9 @@ In your [csv file](https://github.com/laurakurup/census-api/raw/master/census_va
 
 **Add the year?**  If _add_year_ is True (line 73 of the script), the year will be appended to the column name:
 
-year: _**2000**_   column_name: _**housing_renter**_   becomes _**housing_renter_2000**_
+year: _**2000**_  <&nbsp> <&nbsp> column_name: _**housing_renter**_   <&nbsp> <&nbsp>  becomes _**housing_renter_2000**_
 
-year: _**2010**_   column_name: _**housing_renter**_   becomes _**housing_renter_2010**_    
+year: _**2010**_  <&nbsp> <&nbsp>   column_name: _**housing_renter**_   <&nbsp> <&nbsp>  becomes _**housing_renter_2010**_    
 
 #### Is there a limit?
 You can run this script for hundreds of variables!  The script will divide your csv file into batches of 50 variables (the API limit) and run multiple requests to gather your data.

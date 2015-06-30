@@ -12,41 +12,38 @@ It's easy!  And fast! Request at [http://www.census.gov/developers/](http://www.
 
 ## 2) Identify variables
 
-**Download the csv template:** [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)
+You need a [csv file](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) of the variables you want to gather.  It should look like this:
 
-Variables can be found here:
+| year | variable | column_name    |
+|------|----------|----------------|
+| 2010 | H0110004 | housing_renter |
+| 2000 | H011003  | housing_renter |
+
+[**Download the template:** https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv).
+
+The template has extra columns, which cut and paste nicely from the Census variable reference pages (links below). **Extra columns are ignored by the script**.  Feel free to delete them!  Or add more!  The script only references _year_, _variable_ and _column_name_.  
+
+#### API Limits?
+You can run this script for 1 variable or hundreds of variables!  The script will divide your requests into batches of 50 (the API limit) and run multiple requests to gather your data.
+
+
+#### Find variables by year:
 
 + 2010 Census: http://api.census.gov/data/2010/sf1/variables.html
 
 + 2000 Census: http://api.census.gov/data/2000/sf1/variables.html 
+ 
+Make sure you list the correct year for each variable.  The variables change year to year, even for the same data.
 
-<br>
+#### Customize your column names:
 
-#### Customize your column names
+In your [csv file](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  You can simply cut/paste the variables into this column.  
 
-In the [census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  You can simple cut/paste the variables.  
+If 'add_year'is True (line 73), **the script adds the year to the column name**:
 
-If **'add_year'** is True (line 73), the script adds the year to the column name:
+year:_2000_ column_name:_housing_renter_ becomes _housing_renter_2000_
 
-year:**'2000'** column_name:**'housing_renter'** becomes **'housing_renter_2000'**
-
-year:**'2010'** column_name:**'housing_renter'** becomes **'housing_renter_2010'**    
-
-<br>
-
-
-#### Only the first three columns are used by this script. 
-
-The label and concept columns are option.  They can be ignored or used for your reference.  I use them to track the census explinations for each variable.  Add more columns if you want!  Just make sure the first three columns are year, variable and column_name.
-
-Make sure you list the correct year for each variable.  They change year to year, even for the same data.  For example:
-
-| year | variable | column_name    | label           | concept                      |
-|------|----------|----------------|-----------------|--------------------------------------
-| 2010 | H0110004 | housing_renter | Renter occupied | H11. TOTAL POPULATION... | 
-| 2000 | H011003  | housing_renter | Renter occupied | H11. Total Population... | 
-
-...  if you query 2010 for H011003, you'll get an error.
+year:_2010_ column_name:_housing_renter_ becomes _housing_renter_2010_    
 
 
 ## 3) Locations:
@@ -60,7 +57,7 @@ You have options!  This script can gather data for 4 types of locations:
 
 Source files and documentation available here: [https://github.com/laurakurup/data](https://github.com/laurakurup/data)
 
-You may get a few errors since cities and counties have formed, merged, dissolved, etc. These data files work well for 2010 and 2000.  If you want to query 1990, you may want to find FIPS codes that were accurate for 1990. For more info, see [https://www.census.gov/geo/reference/county-changes.html](https://www.census.gov/geo/reference/county-changes.html).    
+You may get a few errors since cities and counties have formed, merged, dissolved, etc. These data files work well for 2010 and 2000 with only a handful of inconsistencies.  The script prints errors so you'll see what doesn't work.  If you want to query 1990, you may want to find FIPS codes that were accurate for 1990. For more info, see [https://www.census.gov/geo/reference/county-changes.html](https://www.census.gov/geo/reference/county-changes.html).    
 
 
 

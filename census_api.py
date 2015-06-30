@@ -67,7 +67,7 @@ variables_csv = 'census_variables.csv'
 location_type = 'state'   
 
 # maximum variables per request
-api_variable_limit = 49
+api_variable_limit = 50
 
 # want to add the year to the end of your column names? (True or False)
 add_year = True
@@ -178,7 +178,7 @@ for year in years_to_query:
     # create a list of the variables for the year
     new_variables_list = [item for item in variables_list if item['year'] == year]
     # iterate through list(s) of variables that are < the api limit
-    for i in xrange(0, len(new_variables_list), api_variable_limit):
+    for i in xrange(i, len(new_variables_list), api_variable_limit):
         print 'Starting request for Census ' + str(year) + ' variables ' + str(i) + ' through ' + str(i+api_variable_limit) + ':'
         print '---------------------------------------------------'
         # create a list of the next batch of varibles to request

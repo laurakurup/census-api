@@ -3,57 +3,22 @@ Last Updated June 30, 2015
 by Laura Kurup
 https://github.com/laurakurup
 
-Create a pandas dataframe and csv file from the U.S. Census Decennial 
-Census API, which offers access to population data by sex, age, race, 
-etc. and housing data by occupancy, vacancy status, and tenure.             
+Description: Create a pandas dataframe and csv file from the U.S. Census 
+Decennial Census API, which offers access to population data by sex, age, 
+race, etc. and housing data by occupancy, vacancy status, and tenure.             
+
+Documentation: https://github.com/laurakurup/census-api/raw/master/README.md
+
+Please check out README.md for a complete
+explanation of the variables and options below
+
+Happy querying!
+
+'''
 
 
-Census API key:
 
-    Request at http://www.census.gov/developers/
-        
-Variables:
 
-    Get the csv template: 
-    https://github.com/laurakurup/census-api/raw/master/census_variables_sample.csv
-    
-    ... and fill it in with the variables you want! Only the first three 
-    columns are used by this script.  The remaining columns can be ignored 
-    or used for your reference.  Variables can be found here:
-    
-    Variables for 2010 Census:
-    http://api.census.gov/data/2010/sf1/variables.html
-            
-    Variables for 2000 Census:  
-    http://api.census.gov/data/2000/sf1/variables.html 
-    
-Column Names:
-
-    In the csv file, provide the name you want for each column of data.  If 
-    'add_year' is True (line 73), the script adds the year to the column name:
-    
-    year:'2000' column_name:'housing_renter' becomes 'housing_renter_2000'
-    
-    year:'2010' column_name:'housing_renter' becomes 'housing_renter_2010'    
-
-Locations:
-
-    'state' returns data for 50 U.S. States 
-    'county' returns data for 3,142 counties in U.S. States
-    'metro' returns data for 685 metropolitan areas (50,000+ population) in the U.S.
-    'metro-micro' returns metro plus 564 micropolitan areas (10,000 - 50,000 population)
-    
-    Source files and documentation available here: https://github.com/laurakurup/data 
-    
-    You will see a few errors since cities and counties have formed, merged, 
-    dissolved, etc. These data files work well for 2010 and 2000.  If you want 
-    to query 1990, you may want to find FIPS codes that were accurate for 1990.
-    For more info, see https://www.census.gov/geo/reference/county-changes.html.    
-                 
-                                                                            '''
-      
-                               
-                               
 ''' Configure your request '''
 
 # census API key --> request at http://www.census.gov/developers/
@@ -69,14 +34,15 @@ location_type = 'state'
 # maximum variables per request
 api_variable_limit = 50
 
-# want to add the year to the end of your column names? (True or False)
+# append the year to your column names (True / False)
+# e.g. 'housing_renter' becomes 'housing_renter_2010'
 add_year = True
 
 # subdirectory for data exports (relative to python's working directory)
 # if not using, leave as empty string
 subdirectory = 'data/census/'
 
-# want to add a timestamp to the end of your csv filename?  True / False
+# add a timestamp to your csv export filename (True / False)
 # this keeps me from overwriting my data :)
 time_stamp = True
 
@@ -231,5 +197,3 @@ else:
 
 # save data to csv    
 df.to_csv(file_name, index=False)   
-
-

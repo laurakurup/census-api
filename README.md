@@ -35,11 +35,13 @@ Make sure you list the correct year for each variable.  The variables change yea
 
 In your [csv file](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  You can simply cut/paste the variables into this column.  
 
-**Add the year?**  If _add_year_ is True (line 73 of the script), the year will be appended to the column name:
+**Add the year to your column names?**  If the option _add_year_ is True (line 73 of the script), the year will be appended to the column name:
 
-year: _**2000**_  <&nbsp> <&nbsp> column_name: _**housing_renter**_   <&nbsp> <&nbsp>  becomes _**housing_renter_2000**_
+| year | variable | column_name   | column_name (dataframe)    |
+|------|----------|----------------| -----------------------------|
+| 2010 | H0110004 | housing_renter | housing_renter_2010 |
+| 2000 | H011003  | housing_renter | housing_renter_2000 |
 
-year: _**2010**_  <&nbsp> <&nbsp>   column_name: _**housing_renter**_   <&nbsp> <&nbsp>  becomes _**housing_renter_2010**_    
 
 #### Is there a limit?
 You can run this script for hundreds of variables!  The script will divide your csv file into batches of 50 variables (the API limit) and run multiple requests to gather your data.

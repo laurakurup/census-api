@@ -56,7 +56,7 @@ You have options!  This script can gather data for 4 types of locations:
 + **'state'** returns data for 50 U.S. States 
 + **'county'** returns data for 3,142 counties in U.S. States
 + **'metro'** returns data for 685 metropolitan areas (50,000+ population) in the U.S.
-+ **'metro-micro'** returns metro plus 564 micropolitan areas (10,000 - 50,000 population)
++ **'metro-micro'** returns data for the 685 metros plus 564 micropolitan areas (10,000 - 50,000 population)
 
 Source files and documentation available here: [https://github.com/laurakurup/data](https://github.com/laurakurup/data)
 

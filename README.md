@@ -33,9 +33,9 @@ Make sure you list the correct year for each variable.  The variables change yea
 
 #### Customize your column names:
 
-In your [csv file](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  Just reuse your variables as your column names.  
+In your csv file, provide the header for each column of data.  Don't need human-readable headers?  Just reuse your variables as your column names.  
 
-**Add the year to your column names?**  If the option _add_year_ is True (line 73 of the script), the year will be appended to the column name:
+**Add the year to your column names?**  If the option _add_year_ is True (line 39 of the script), the year will be appended to the column name:
 
 | year | variable | column_name   | column_name (dataframe)    |
 |------|----------|----------------| -----------------------------|

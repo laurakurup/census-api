@@ -21,7 +21,7 @@ You need a csv file of the variables you want to gather.  It should look like th
 
 Download the **[census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)** template.
 
-**Extra columns are ignored by the script**. The template has columns for _label_ and _concept_, which cut and paste nicely from the Census variable reference pages (links below).  Feel free to delete them!  Or add more!  The script only uses _year_, _variable_ and _column_name_.  
+The template has columns for _label_ and _concept_, which cut and paste nicely from the Census variable reference pages (links below).  **Extra columns are ignored by the script**. Feel free to delete them!  Or add more!  The script only uses the first three columns: _year_, _variable_ and _column_name_.  
 
 #### Find variables by year:
 

@@ -11,27 +11,23 @@ It's easy!  And fast! Request at [http://www.census.gov/developers/](http://www.
 
 ## 2) Identify variables for the data you want
 
-###Get the csv template:
-
-[https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)
+**Get the csv template:** [https://github.com/laurakurup/census-api/raw/master/census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv)
 
 Variables can be found here:
 
-+ Variables for 2010 Census:
-  http://api.census.gov/data/2010/sf1/variables.html
-        
-+ Variables for 2000 Census:  
-  http://api.census.gov/data/2000/sf1/variables.html 
++ 2010 Census: http://api.census.gov/data/2010/sf1/variables.html
+
++ 2000 Census: http://api.census.gov/data/2000/sf1/variables.html 
 
 ### Customize your column names
 
 In the [census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  You can simple cut/paste the variables.  
 
-If 'add_year' is True (line 73), the script adds the year to the column name:
+If **'add_year'** is True (line 73), the script adds the year to the column name:
 
-year:'2000' column_name:'housing_renter' becomes 'housing_renter_2000'
+year:**'2000'** column_name:**'housing_renter'** becomes **'housing_renter_2000'**
 
-year:'2010' column_name:'housing_renter' becomes 'housing_renter_2010'    
+year:**'2010'** column_name:**'housing_renter'** becomes **'housing_renter_2010'**    
 
 ### Only the first three columns are used by this script. 
 
@@ -49,12 +45,12 @@ Make sure you list the correct year for each variable.  They change year to year
 
 ## 3) Locations:
 
-You have options!  Select your location type:
+You have options!  This script can gather data for 4 types of locations:
 
-+ 'state' returns data for 50 U.S. States 
-+ 'county' returns data for 3,142 counties in U.S. States
-+ 'metro' returns data for 685 metropolitan areas (50,000+ population) in the U.S.
-+ 'metro-micro' returns metro plus 564 micropolitan areas (10,000 - 50,000 population)
++ **'state'** returns data for 50 U.S. States 
++ **'county'** returns data for 3,142 counties in U.S. States
++ **'metro'** returns data for 685 metropolitan areas (50,000+ population) in the U.S.
++ **'metro-micro'** returns metro plus 564 micropolitan areas (10,000 - 50,000 population)
 
 Source files and documentation available here: [https://github.com/laurakurup/data](https://github.com/laurakurup/data)
 

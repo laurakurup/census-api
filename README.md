@@ -19,6 +19,8 @@ Variables can be found here:
 
 + 2000 Census: http://api.census.gov/data/2000/sf1/variables.html 
 
+
+
 #### Customize your column names
 
 In the [census_variables.csv](https://github.com/laurakurup/census-api/raw/master/census_variables.csv) file, provide the name you want for each column of data.  Don't need human-readable column names?  You can simple cut/paste the variables.  
@@ -29,16 +31,18 @@ year:**'2000'** column_name:**'housing_renter'** becomes **'housing_renter_2000'
 
 year:**'2010'** column_name:**'housing_renter'** becomes **'housing_renter_2010'**    
 
+
+
 #### Only the first three columns are used by this script. 
 
 The label and concept columns are option.  They can be ignored or used for your reference.  I use them to track the census explinations for each variable.  Add more columns if you want!  Just make sure the first three columns are year, variable and column_name.
 
 Make sure you list the correct year for each variable.  They change year to year, even for the same data.  For example:
 
-| year | variable | column_name    | label           | concept                                     |
-|------|----------|----------------|-----------------|---------------------------------------------------------------
-| 2010 | H0110004 | housing_renter | Renter occupied | H11. TOTAL POPULATION IN OCCUPIED... | 
-| 2000 | H011003  | housing_renter | Renter occupied | H11. Total Population In Occupied... | 
+| year | variable | column_name    | label           | concept                      |
+|------|----------|----------------|-----------------|--------------------------------------
+| 2010 | H0110004 | housing_renter | Renter occupied | H11. TOTAL POPULA... | 
+| 2000 | H011003  | housing_renter | Renter occupied | H11. Total Popula... | 
 
 ...  if you query 2010 for H011003, you'll get an error.
 

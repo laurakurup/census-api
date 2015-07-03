@@ -189,9 +189,9 @@ df = df.drop('source_url', 1)
 df = df.drop('new_data', 1)
 
 # construct csv file name with date and time added to file name (if time_stamp == True)
+# or, without date and time (if time_stamp == False)
 if time_stamp == True:
     file_name = subdirectory + 'census-data-by-' + location_type + '-' + datetime.datetime.strftime(datetime.datetime.now(), '%Y.%m.%d-%I.%M%p') + '.csv'
-# construct csv file name without date and time (if time_stamp == False)
 else: 
     file_name = subdirectory + 'census-data-by' + location_type + '.csv'
 
